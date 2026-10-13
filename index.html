@@ -1,84 +1,113 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>خالد للأثاث الراقي</title>
-  <meta name="description" content="خالد للأثاث الراقي - معرض أثاث منزلي بتصميم فاخر.">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>خالد للأثاث الراقي</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#101010;color:#fff;font-family:Tahoma,Arial,sans-serif}
+header{background:#080808;padding:15px 5%;border-bottom:2px solid #c8a45d;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.logo{color:#e4c27d;font-size:23px;font-weight:bold}
+nav{display:flex;gap:16px;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;font-size:14px}
+nav a:hover{color:#e4c27d}
+.hero{min-height:390px;background:linear-gradient(90deg,#000b,#0005),url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85') center/cover;display:flex;align-items:center;padding:45px 7%}
+.hero div{max-width:550px}
+.hero h1{font-size:clamp(32px,5vw,52px);color:#e4c27d;margin:0 0 15px}
+.hero p{font-size:18px;line-height:1.9}
+.btn{display:inline-block;background:#d4b16b;color:#111;padding:11px 22px;border-radius:25px;text-decoration:none;font-weight:bold;margin-top:10px}
+section{padding:42px 5%}
+h2{text-align:center;color:#d9b66f;margin:0 0 28px}
+.categories{background:#f4efe6;color:#222}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{position:relative;overflow:hidden;border-radius:9px;min-height:180px;background:#292522}
+.card img{width:100%;height:180px;object-fit:cover;display:block;transition:transform .3s}
+.card:hover img{transform:scale(1.04)}
+.card h3{text-align:center;margin:0;padding:12px;background:#171513;color:#e4c27d}
+.products{background:#f4efe6;color:#222}
+.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.product{background:white;border-radius:9px;overflow:hidden;text-align:center;padding-bottom:15px}
+.product img{width:100%;height:165px;object-fit:cover}
+.product h3{font-size:16px}
+.product a{display:inline-block;background:#171513;color:#e4c27d;padding:8px 15px;border-radius:20px;text-decoration:none}
+.why{text-align:center;background:#181614}
+.why p{color:#ddd;line-height:2}
+footer{padding:30px 5%;background:#070707;border-top:2px solid #c8a45d;text-align:center;line-height:2}
+footer h2{margin-bottom:12px}
+.phone{direction:ltr;display:inline-block;color:#e4c27d;font-weight:bold}
+footer a{color:#e4c27d}
+.float{position:fixed;bottom:16px;left:14px;background:#20b85a;color:#fff;padding:12px 17px;border-radius:28px;text-decoration:none;z-index:10;font-weight:bold}
+@media(max-width:700px){
+ header{justify-content:center;text-align:center}
+ nav{justify-content:center}
+ .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .card,.card img{min-height:140px;height:140px}
+ .card h3{font-size:14px}
+ .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .product img{height:135px}
+ .hero{min-height:340px;background-position:center}
+ .hero p{font-size:15px}
+ section{padding:32px 4%}
+}
+</style>
 </head>
 <body>
-<header class="header">
-  <a class="brand" href="#">
-    <span class="logo-mark">خ</span>
-    <span><b>خالد للأثاث الراقي</b><small>KHALED LUXURY FURNITURE</small></span>
-  </a>
-  <nav>
-    <a href="#home">الرئيسية</a><a href="#categories">الأقسام</a>
-    <a href="#featured">منتجات مميزة</a><a href="#contact">تواصل معنا</a>
-  </nav>
-  <a class="wa" href="https://wa.me/201223601665" target="_blank">واتساب</a>
+<header>
+<div class="logo">خالد للأثاث الراقي</div>
+<nav>
+<a href="#home">الرئيسية</a>
+<a href="#categories">الأقسام</a>
+<a href="#products">منتجات مميزة</a>
+<a href="#contact">تواصل معنا</a>
+</nav>
 </header>
 
 <main>
-<section id="home" class="hero">
-  <div class="hero-copy">
-    <p>مرحباً بكم في معرضنا</p>
-    <h1>خالد للأثاث الراقي</h1>
-    <div class="line"></div>
-    <h2>لأن بيتك يستحق الأفضل</h2>
-    <a class="btn" href="#categories">تصفح الأقسام ←</a>
-  </div>
-</section>
+<div class="hero" id="home">
+<div>
+<h1>خالد للأثاث الراقي</h1>
+<p>الأناقة والراحة في كل تفصيلة. اختار أثاث بيتك من تشكيلات مميزة تناسب ذوقك.</p>
+<a class="btn" href="#categories">اكتشف أقسامنا</a>
+</div>
+</div>
 
-<section id="categories" class="section">
-  <h2 class="title">أقسام المعرض</h2>
-  <div class="cards categories">
-    <article><div class="ph">غرفة سفرة</div><h3>غرف السفرة</h3></article>
-    <article><div class="ph">غرفة معيشة</div><h3>غرف المعيشة</h3></article>
-    <article><div class="ph">غرفة نوم</div><h3>غرف النوم</h3></article>
-    <article><div class="ph">أنتريه</div><h3>أنتريهات</h3></article>
-    <article><div class="ph">مكتب</div><h3>أثاث مكتبي</h3></article>
-  </div>
+<section class="categories" id="categories">
+<h2 style="color:#342718">أقسام المعرض</h2>
+<div class="grid">
+<a class="card" href="#products" style="text-decoration:none"><img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=700&q=80" alt="غرف سفرة"><h3>غرف سفرة</h3></a>
+<a class="card" href="#products" style="text-decoration:none"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=80" alt="الركن"><h3>الركن</h3></a>
+<a class="card" href="#products" style="text-decoration:none"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=700&q=80" alt="غرف نوم"><h3>غرف نوم</h3></a>
+<a class="card" href="#products" style="text-decoration:none"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=80" alt="انتريهات"><h3>انتريهات</h3></a>
+<a class="card" href="#products" style="text-decoration:none"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=700&q=80" alt="غرف نوم أطفال"><h3>غرف نوم أطفال</h3></a>
+</div>
 </section>
 
 <section class="why">
-  <h2>لماذا تختارنا؟</h2>
-  <div class="why-grid">
-    <div><b>أسعار مناسبة</b><span>اختيارات بجودة وقيمة مميزة</span></div>
-    <div><b>جودة عالية</b><span>أثاث أنيق مصمم ليدوم</span></div>
-    <div><b>توصيل سريع</b><span>خدمة توصيل حسب المنطقة</span></div>
-    <div><b>خدمة ما بعد البيع</b><span>دعم دائم لراحتك</span></div>
-  </div>
+<h2>لماذا تختار خالد للأثاث الراقي؟</h2>
+<p>تصميمات أنيقة • اختيارات متنوعة • اهتمام بالتفاصيل • تواصل مباشر مع المعرض</p>
 </section>
 
-<section id="featured" class="section">
-  <h2 class="title">منتجات مميزة</h2>
-  <div class="products">
-    <article><div class="ph">غرفة نوم مودرن</div><h3>غرفة نوم مودرن</h3><a class="smallbtn" href="#contact">اطلب الآن</a></article>
-    <article><div class="ph">ركنة مريحة</div><h3>ركنة مريحة</h3><a class="smallbtn" href="#contact">اطلب الآن</a></article>
-    <article><div class="ph">سفرة</div><h3>سفرة عصرية</h3><a class="smallbtn" href="#contact">اطلب الآن</a></article>
-    <article><div class="ph">أنتريه كلاسيك</div><h3>أنتريه كلاسيك</h3><a class="smallbtn" href="#contact">اطلب الآن</a></article>
-  </div>
-</section>
-
-<section id="contact" class="contact">
-  <div>
-    <h2>تواصل مع خالد للأثاث الراقي</h2>
-    <p>أضف صور منتجاتك الحقيقية ورقمك وعنوانك هنا قبل نشر الموقع.</p>
-  </div>
-  <div class="contact-box">
-    <p>📞 <b>01223601665</b></p>
-<p>📍 الإسكندرية – العوايد – خورشيد – شارع الرحمة – بجوار مستشفى السعد</p>
-    <p>🕐 يومياً: 13:00 – 00:00</p>
-    <a class="btn" href="https://wa.me/201223601665" target="_blank">راسلنا على واتساب</a>
-  </div>
+<section class="products" id="products">
+<h2 style="color:#342718">منتجات مميزة</h2>
+<div class="product-grid">
+<div class="product"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=600&q=80" alt="غرفة نوم"><h3>غرف نوم</h3><a href="https://wa.me/201283054196" target="_blank">استفسر على واتساب</a></div>
+<div class="product"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=600&q=80" alt="ركنة"><h3>الركن</h3><a href="https://wa.me/201283054196" target="_blank">استفسر على واتساب</a></div>
+<div class="product"><img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=600&q=80" alt="سفرة"><h3>غرف سفرة</h3><a href="https://wa.me/201283054196" target="_blank">استفسر على واتساب</a></div>
+<div class="product"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80" alt="انتريه"><h3>انتريهات</h3><a href="https://wa.me/201283054196" target="_blank">استفسر على واتساب</a></div>
+</div>
 </section>
 </main>
 
-<footer id="footer">
-  <b>خالد للأثاث الراقي</b>
-  <span>© 2026 جميع الحقوق محفوظة</span>
+<footer id="contact">
+<h2>تواصل مع خالد للأثاث الراقي</h2>
+<p>للمكالمات والواتساب</p>
+<p><a class="phone" href="tel:01283054196">01283054196</a></p>
+<p><a href="https://wa.me/201283054196" target="_blank">راسلنا على واتساب</a></p>
+<p>رقم الهاتف الآخر: <a class="phone" href="tel:01012345678">01012345678</a></p>
+<p>الإسكندرية، مصر</p>
+<p>© 2026 خالد للأثاث الراقي</p>
 </footer>
+<a class="float" href="https://wa.me/201283054196" target="_blank">واتساب</a>
 </body>
 </html>
